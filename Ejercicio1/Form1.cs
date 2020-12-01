@@ -83,7 +83,7 @@ namespace Ejercicio1
             else if (e.Button == MouseButtons.Middle)
             {
                 btnIzquierdo.BackColor = SystemColors.Control; 
-                btnDerecho.BackColor = SystemColors.Control; 
+                btnDerecho.BackColor = SystemColors.Control;
             }
         }
 
