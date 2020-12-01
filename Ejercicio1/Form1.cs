@@ -53,12 +53,17 @@ namespace Ejercicio1
         // Función que controla la pulsación de los dos botones
         private void pulsarBoton(object sender, MouseEventArgs e)
         {
-            if (sender == btnIzquierdo && e.Button == MouseButtons.Left)
+            if (e.Button == MouseButtons.Left)
             {
                 btnIzquierdo.BackColor = Color.IndianRed; // Pongo el color de fondo del formulario a rojo
             }
-            else if (sender == btnDerecho && e.Button == MouseButtons.Right)
+            else if (e.Button == MouseButtons.Right)
             {
+                btnDerecho.BackColor = Color.BlueViolet; // Pongo el color de fondo del formulario a azul
+            }
+            else if (e.Button == MouseButtons.Middle)
+            {
+                btnIzquierdo.BackColor = Color.IndianRed; // Pongo el color de fondo del formulario a rojo
                 btnDerecho.BackColor = Color.BlueViolet; // Pongo el color de fondo del formulario a azul
             }
         }
@@ -67,8 +72,19 @@ namespace Ejercicio1
         // Función que controla cuando se suelta la pulsación de los dos botones
         private void soltarBoton(object sender, MouseEventArgs e)
         {
-            Button boton = (Button)sender;
-            boton.BackColor = SystemColors.Control;
+            if (e.Button == MouseButtons.Left)
+            {
+                btnIzquierdo.BackColor = SystemColors.Control;
+            }
+            else if (e.Button == MouseButtons.Right)
+            {
+                btnDerecho.BackColor = SystemColors.Control; 
+            }
+            else if (e.Button == MouseButtons.Middle)
+            {
+                btnIzquierdo.BackColor = SystemColors.Control; 
+                btnDerecho.BackColor = SystemColors.Control; 
+            }
         }
 
 

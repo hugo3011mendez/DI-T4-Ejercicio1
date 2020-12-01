@@ -41,9 +41,7 @@
             this.btnIzquierdo.TabIndex = 0;
             this.btnIzquierdo.Text = "Izquierdo";
             this.btnIzquierdo.UseVisualStyleBackColor = true;
-            this.btnIzquierdo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pulsarBoton);
             this.btnIzquierdo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.moverRaton);
-            this.btnIzquierdo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.soltarBoton);
             // 
             // btnDerecho
             // 
@@ -53,9 +51,7 @@
             this.btnDerecho.TabIndex = 1;
             this.btnDerecho.Text = "Derecho";
             this.btnDerecho.UseVisualStyleBackColor = true;
-            this.btnDerecho.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pulsarBoton);
             this.btnDerecho.MouseMove += new System.Windows.Forms.MouseEventHandler(this.moverRaton);
-            this.btnDerecho.MouseUp += new System.Windows.Forms.MouseEventHandler(this.soltarBoton);
             // 
             // Formulario
             // 
@@ -69,8 +65,10 @@
             this.Name = "Formulario";
             this.Text = "Mouse Tester";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pulsarBoton);
             this.MouseLeave += new System.EventHandler(this.Form1_MouseLeave);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.moverRaton);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.soltarBoton);
             this.ResumeLayout(false);
 
         }
