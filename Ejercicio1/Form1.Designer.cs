@@ -50,6 +50,7 @@
             this.btnDerecho.TabIndex = 1;
             this.btnDerecho.Text = "Derecho";
             this.btnDerecho.UseVisualStyleBackColor = true;
+            this.btnDerecho.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnDerecho_MouseMove);
             // 
             // Form1
             // 
@@ -60,6 +61,7 @@
             this.Controls.Add(this.btnIzquierdo);
             this.Name = "Form1";
             this.Text = "Mouse Tester";
+            this.MouseLeave += new System.EventHandler(this.Form1_MouseLeave);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.ResumeLayout(false);
 
