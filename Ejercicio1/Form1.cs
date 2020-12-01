@@ -43,31 +43,10 @@ namespace Ejercicio1
             }
         }
 
-        // Mouse Move del Form
-        private void Form1_MouseMove(object sender, MouseEventArgs e)
-        {
-            Text = "X : " + e.X + " Y : " + e.Y;
-        }
-
-
         // Y le indico que cuando el cursor del ratón no esté en la parte visible del Form el título de éste cambie a su valor original
         private void Form1_MouseLeave(object sender, EventArgs e)
         {
             Text = "Mouse Tester";
-        }
-
-
-        // Mouse Move del botón izquierdo
-        private void btnIzquierdo_MouseMove(object sender, MouseEventArgs e)
-        {
-            Text = "X : " + e.X + " Y : " + e.Y;
-        }
-
-
-        // Mouse Move del botón derecho
-        private void btnDerecho_MouseMove(object sender, MouseEventArgs e)
-        {
-            Text = "X : " + e.X + " Y : " + e.Y;
         }
 
 
