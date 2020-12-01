@@ -40,9 +40,9 @@
             this.btnIzquierdo.TabIndex = 0;
             this.btnIzquierdo.Text = "Izquierdo";
             this.btnIzquierdo.UseVisualStyleBackColor = true;
-            this.btnIzquierdo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnIzquierdo_MouseDown);
+            this.btnIzquierdo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pulsarBoton);
             this.btnIzquierdo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnIzquierdo_MouseMove);
-            this.btnIzquierdo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnIzquierdo_MouseUp);
+            this.btnIzquierdo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.soltarBoton);
             // 
             // btnDerecho
             // 
@@ -52,9 +52,9 @@
             this.btnDerecho.TabIndex = 1;
             this.btnDerecho.Text = "Derecho";
             this.btnDerecho.UseVisualStyleBackColor = true;
-            this.btnDerecho.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDerecho_MouseDown);
+            this.btnDerecho.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pulsarBoton);
             this.btnDerecho.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnDerecho_MouseMove);
-            this.btnDerecho.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnDerecho_MouseUp);
+            this.btnDerecho.MouseUp += new System.Windows.Forms.MouseEventHandler(this.soltarBoton);
             // 
             // Form1
             // 

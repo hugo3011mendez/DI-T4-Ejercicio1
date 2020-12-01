@@ -53,40 +53,30 @@ namespace Ejercicio1
         }
 
 
-        // Acciones que realizará cuando se pulse un botón del ratón sobre el botón izquierdo
-        private void btnIzquierdo_MouseDown(object sender, MouseEventArgs e)
+        // Función que controla la pulsación de los dos botones
+        private void pulsarBoton(object sender, MouseEventArgs e)
         {
-            if(e.Button == MouseButtons.Left) // Si está siendo presionado el botón izquierdo del ratón
+            if (sender == btnIzquierdo && e.Button == MouseButtons.Left)
             {
-                BackColor = Color.IndianRed; // Pongo el color de fondo del formulario a rojo
+                btnIzquierdo.BackColor = Color.IndianRed; // Pongo el color de fondo del formulario a rojo
+            }
+            else if (sender == btnDerecho && e.Button == MouseButtons.Right)
+            {
+                btnDerecho.BackColor = Color.BlueViolet; // Pongo el color de fondo del formulario a azul
             }
         }
 
 
-        // Acciones a realizar cuando se deje de pulsar el botón del ratón correspondiente sobre el botón izquierdo
-        private void btnIzquierdo_MouseUp(object sender, MouseEventArgs e)
+        // Función que controla cuando se suelta la pulsación de los dos botones
+        private void soltarBoton(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left) // Si se estaba presionando el botón izquierdo del ratón
+            if (sender == btnIzquierdo)
             {
-                BackColor = SystemColors.Control; // Vuelvo a poner el color de fondo del formulario a su valor original
+               btnIzquierdo.BackColor = SystemColors.Control;
             }
-        }
-        
-         
-        // Acciones que realizará cuando se pulse el botón del ratón correspondiente en el botón derecho
-        private void btnDerecho_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right) // Si se presiona el botón derecho del ratón
+            else if (sender == btnDerecho)
             {
-                BackColor = Color.AliceBlue; // Pongo el color de fondo del formulario a azul
-            }
-        }
-
-        private void btnDerecho_MouseUp(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right) // Si se estaba presionando el botón derecho del ratón
-            {
-                BackColor = SystemColors.Control; // Pongo el color de fondo del formulario a su valor original
+                btnDerecho.BackColor = SystemColors.Control;
             }
         }
 
