@@ -34,7 +34,7 @@
             // 
             // btnIzquierdo
             // 
-            this.btnIzquierdo.Location = new System.Drawing.Point(115, 108);
+            this.btnIzquierdo.Location = new System.Drawing.Point(65, 80);
             this.btnIzquierdo.Name = "btnIzquierdo";
             this.btnIzquierdo.Size = new System.Drawing.Size(94, 47);
             this.btnIzquierdo.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             // btnDerecho
             // 
-            this.btnDerecho.Location = new System.Drawing.Point(509, 108);
+            this.btnDerecho.Location = new System.Drawing.Point(315, 80);
             this.btnDerecho.Name = "btnDerecho";
             this.btnDerecho.Size = new System.Drawing.Size(92, 48);
             this.btnDerecho.TabIndex = 1;
@@ -60,7 +60,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(520, 232);
             this.Controls.Add(this.btnDerecho);
             this.Controls.Add(this.btnIzquierdo);
             this.KeyPreview = true;
