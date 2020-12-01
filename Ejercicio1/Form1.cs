@@ -67,14 +67,8 @@ namespace Ejercicio1
         // Función que controla cuando se suelta la pulsación de los dos botones
         private void soltarBoton(object sender, MouseEventArgs e)
         {
-            if (sender == btnIzquierdo)
-            {
-               btnIzquierdo.BackColor = SystemColors.Control;
-            }
-            else if (sender == btnDerecho)
-            {
-                btnDerecho.BackColor = SystemColors.Control;
-            }
+            Button boton = (Button)sender;
+            boton.BackColor = SystemColors.Control;
         }
 
 
