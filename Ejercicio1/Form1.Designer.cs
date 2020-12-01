@@ -63,8 +63,10 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnDerecho);
             this.Controls.Add(this.btnIzquierdo);
+            this.KeyPreview = true;
             this.Name = "Form1";
             this.Text = "Mouse Tester";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.MouseLeave += new System.EventHandler(this.Form1_MouseLeave);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.ResumeLayout(false);

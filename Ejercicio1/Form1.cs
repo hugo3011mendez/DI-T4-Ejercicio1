@@ -1,4 +1,6 @@
-﻿using System;
+﻿#define TECLA
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -81,5 +83,35 @@ namespace Ejercicio1
                 BackColor = SystemColors.Control; // Pongo el color de fondo del formulario a su valor original
             }
         }
+
+
+        #if TECLA
+            private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+            {
+                if (e.KeyChar != (char)Keys.Escape)
+                {
+                    Text = e.KeyChar.ToString();
+                }
+                else
+                {
+                    Text = "Mouse Tester";
+                }
+            }
+
+        #elif !TECLA
+            private void Form1_KeyDown(object sender, KeyEventArgs e)
+            {
+                if (e.KeyCode != Keys.Escape)
+                {
+                    Text = e.KeyCode.ToString();
+                }
+                else
+                {
+                    Text = "Mouse Tester";
+                }
+            }
+
+
+        #endif
     }
 }
