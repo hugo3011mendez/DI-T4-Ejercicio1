@@ -44,5 +44,42 @@ namespace Ejercicio1
             Text = Form1.MousePosition.ToString();
         }
 
+
+        // Acciones que realizará cuando se pulse un botón del ratón sobre el botón izquierdo
+        private void btnIzquierdo_MouseDown(object sender, MouseEventArgs e)
+        {
+            if(e.Button == MouseButtons.Left) // Si está siendo presionado el botón izquierdo del ratón
+            {
+                BackColor = Color.IndianRed; // Pongo el color de fondo del formulario a rojo
+            }
+        }
+
+
+        // Acciones a realizar cuando se deje de pulsar el botón del ratón correspondiente sobre el botón izquierdo
+        private void btnIzquierdo_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left) // Si se estaba presionando el botón izquierdo del ratón
+            {
+                BackColor = SystemColors.Control; // Vuelvo a poner el color de fondo del formulario a su valor original
+            }
+        }
+        
+         
+        // Acciones que realizará cuando se pulse el botón del ratón correspondiente en el botón derecho
+        private void btnDerecho_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right) // Si se presiona el botón derecho del ratón
+            {
+                BackColor = Color.AliceBlue; // Pongo el color de fondo del formulario a azul
+            }
+        }
+
+        private void btnDerecho_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right) // Si se estaba presionando el botón derecho del ratón
+            {
+                BackColor = SystemColors.Control; // Pongo el color de fondo del formulario a su valor original
+            }
+        }
     }
 }
