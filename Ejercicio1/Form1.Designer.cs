@@ -1,6 +1,6 @@
 ﻿namespace Ejercicio1
 {
-    partial class Form1
+    partial class Formulario
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Formulario));
             this.btnIzquierdo = new System.Windows.Forms.Button();
             this.btnDerecho = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -41,7 +42,7 @@
             this.btnIzquierdo.Text = "Izquierdo";
             this.btnIzquierdo.UseVisualStyleBackColor = true;
             this.btnIzquierdo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pulsarBoton);
-            this.btnIzquierdo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnIzquierdo_MouseMove);
+            this.btnIzquierdo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.moverRaton);
             this.btnIzquierdo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.soltarBoton);
             // 
             // btnDerecho
@@ -53,22 +54,23 @@
             this.btnDerecho.Text = "Derecho";
             this.btnDerecho.UseVisualStyleBackColor = true;
             this.btnDerecho.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pulsarBoton);
-            this.btnDerecho.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnDerecho_MouseMove);
+            this.btnDerecho.MouseMove += new System.Windows.Forms.MouseEventHandler(this.moverRaton);
             this.btnDerecho.MouseUp += new System.Windows.Forms.MouseEventHandler(this.soltarBoton);
             // 
-            // Form1
+            // Formulario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(520, 232);
             this.Controls.Add(this.btnDerecho);
             this.Controls.Add(this.btnIzquierdo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.Name = "Form1";
+            this.Name = "Formulario";
             this.Text = "Mouse Tester";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.MouseLeave += new System.EventHandler(this.Form1_MouseLeave);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.moverRaton);
             this.ResumeLayout(false);
 
         }

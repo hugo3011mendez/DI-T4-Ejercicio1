@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Ejercicio1
 {
-    public partial class Form1 : Form
+    public partial class Formulario : Form
     {
-        public Form1()
+        public Formulario()
         {
             InitializeComponent();
 
@@ -25,10 +25,28 @@ namespace Ejercicio1
             #endif
         }
 
+
+        private void moverRaton(object sender, MouseEventArgs e)
+        {
+
+            if (sender == btnIzquierdo)
+            {
+                Text = "X : " + (e.X + 65) + " Y : " + (e.Y + 80);
+            }
+            else if (sender == btnDerecho)
+            {
+                Text = "X : " + (e.X + 315) + " Y : " + (e.Y + 80);
+            }
+            else
+            {
+                Text = "X : " + e.X + " Y : " + e.Y;
+            }
+        }
+
         // Mouse Move del Form
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
-            Text = Form1.MousePosition.ToString();
+            Text = "X : " + e.X + " Y : " + e.Y;
         }
 
 
@@ -42,14 +60,14 @@ namespace Ejercicio1
         // Mouse Move del botón izquierdo
         private void btnIzquierdo_MouseMove(object sender, MouseEventArgs e)
         {
-            Text = Form1.MousePosition.ToString();
+            Text = "X : " + e.X + " Y : " + e.Y;
         }
 
 
         // Mouse Move del botón derecho
         private void btnDerecho_MouseMove(object sender, MouseEventArgs e)
         {
-            Text = Form1.MousePosition.ToString();
+            Text = "X : " + e.X + " Y : " + e.Y;
         }
 
 
