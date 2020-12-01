@@ -66,14 +66,14 @@
             this.KeyPreview = true;
             this.Name = "Form1";
             this.Text = "Mouse Tester";
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.MouseLeave += new System.EventHandler(this.Form1_MouseLeave);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.ResumeLayout(false);
 
         }
 
-        #endregion
+#endregion
 
         private System.Windows.Forms.Button btnIzquierdo;
         private System.Windows.Forms.Button btnDerecho;

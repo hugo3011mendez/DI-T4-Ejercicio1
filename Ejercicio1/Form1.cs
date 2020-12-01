@@ -17,6 +17,12 @@ namespace Ejercicio1
         public Form1()
         {
             InitializeComponent();
+
+            #if TECLA
+                this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            #elif !TECLA
+                    this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            #endif
         }
 
         // Mouse Move del Form
@@ -85,33 +91,39 @@ namespace Ejercicio1
         }
 
 
-        #if TECLA
-            private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar != (char)Keys.Escape)
             {
-                if (e.KeyChar != (char)Keys.Escape)
-                {
-                    Text = e.KeyChar.ToString();
-                }
-                else
-                {
-                    Text = "Mouse Tester";
-                }
+                Text = e.KeyChar.ToString();
             }
-
-        #elif !TECLA
-            private void Form1_KeyDown(object sender, KeyEventArgs e)
+            else
             {
-                if (e.KeyCode != Keys.Escape)
-                {
-                    Text = e.KeyCode.ToString();
-                }
-                else
-                {
-                    Text = "Mouse Tester";
-                }
+                Text = "Mouse Tester";
             }
+        }
 
 
-        #endif
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode != Keys.Escape)
+            {
+                Text = e.KeyCode.ToString();
+            }
+            else
+            {
+                Text = "Mouse Tester";
+            }
+        }
+
+
+        // Acciones a realizar cuando se quiere salir del Form
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("¿Seguro que desea salir?", "Ejercicio 1", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.Cancel)
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }
