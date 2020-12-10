@@ -25,10 +25,10 @@ namespace Ejercicio1
             #endif
         }
 
-
+        // Función que controla el movimiento del cursor del ratón en el formulario
         private void moverRaton(object sender, MouseEventArgs e)
         {
-
+            // Dependiendo del sender, muestro las coordenadas correctas
             if (sender == btnIzquierdo)
             {
                 Text = "X : " + (e.X + 65) + " Y : " + (e.Y + 80);
