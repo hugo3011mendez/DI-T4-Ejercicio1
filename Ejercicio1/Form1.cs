@@ -25,24 +25,24 @@ namespace Ejercicio1
             #endif
         }
 
+
         // Función que controla el movimiento del cursor del ratón en el formulario
         private void moverRaton(object sender, MouseEventArgs e)
         {
+            Button boton; // Creo una variable de tipo botón para castear el sender
+
             // Dependiendo del sender, muestro las coordenadas correctas
-            if (sender == btnIzquierdo)
+            if (sender is Button) // Si el sender es un botón...
             {
-                Text = "X : " + (e.X + btnIzquierdo.Location.X) + " Y : " + (e.Y + btnIzquierdo.Location.Y);
-                
-            }
-            else if (sender == btnDerecho)
-            {
-                Text = "X : " + (e.X + btnDerecho.Location.X) + " Y : " + (e.Y + btnDerecho.Location.Y);
+                boton = (Button)sender; // Establezco la variable tipo Button al sender casteado como Button
+                Text = "X : " + (e.X + boton.Location.X) + " Y : " + (e.Y + boton.Location.Y);
             }
             else
             {
                 Text = "X : " + e.X + " Y : " + e.Y;
             }
         }
+
 
         // Y le indico que cuando el cursor del ratón no esté en la parte visible del Form el título de éste cambie a su valor original
         private void Form1_MouseLeave(object sender, EventArgs e)
@@ -89,6 +89,7 @@ namespace Ejercicio1
         }
 
 
+        // Función que indica las acciones a realizar cuando se realiza una pulsación de una tecla
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar != (char)Keys.Escape)
@@ -102,6 +103,7 @@ namespace Ejercicio1
         }
 
 
+        // Función que indica las acciones a realizar cuando se presiona una tecla
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode != Keys.Escape)
