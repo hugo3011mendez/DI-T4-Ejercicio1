@@ -31,11 +31,12 @@ namespace Ejercicio1
             // Dependiendo del sender, muestro las coordenadas correctas
             if (sender == btnIzquierdo)
             {
-                Text = "X : " + (e.X + 65) + " Y : " + (e.Y + 80);
+                Text = "X : " + (e.X + btnIzquierdo.Location.X) + " Y : " + (e.Y + btnIzquierdo.Location.Y);
+                
             }
             else if (sender == btnDerecho)
             {
-                Text = "X : " + (e.X + 315) + " Y : " + (e.Y + 80);
+                Text = "X : " + (e.X + btnDerecho.Location.X) + " Y : " + (e.Y + btnDerecho.Location.Y);
             }
             else
             {
